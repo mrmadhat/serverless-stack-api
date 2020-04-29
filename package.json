@@ -14,11 +14,14 @@
   },
   "devDependencies": {
     "aws-sdk": "^2.665.0",
+    "eslint-plugin-html": "^6.0.2",
+    "eslint-plugin-markdown": "^1.0.2",
     "serverless-bundle": "^1.2.5",
     "serverless-dotenv-plugin": "^2.1.1",
     "serverless-offline": "^5.3.3"
   },
   "dependencies": {
+    "stripe": "^8.47.1",
     "uuid": "^7.0.3"
   }
 }
