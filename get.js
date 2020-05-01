@@ -9,7 +9,7 @@ export const main = handler(async (event, context) => {
     // - 'noteId': path parameter
     Key: {
       userId: event.requestContext.identity.cognitoIdentityId,
-      // noteId: event.pathParameters.id,
+      noteId: event.pathParameters.id,
     },
   }
 
@@ -18,6 +18,9 @@ export const main = handler(async (event, context) => {
   if (!result.Item) {
     throw new Error("Item not found.")
   }
+
+  // Set a timeout
+  await new Promise((resolve) => setTimeout(resolve, 10000))
 
   return result.Item
 })
