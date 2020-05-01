@@ -61,6 +61,8 @@ functions:
           authorizer: aws_iam
   get:
     handler: get.main
+    memorySize: 128
+    timeout: 20
     events:
       - http:
           path: notes/{id}
